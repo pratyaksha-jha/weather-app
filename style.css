@@ -1,0 +1,104 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  width: 100%;
+  transition: background 1s ease, color 0.5s ease;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.weather-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.weather-box img {
+  width: 80px;
+  transition: transform 1s ease;
+  margin: 1rem auto;
+  display: block;
+}
+
+.weather-icon-bg {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+.search {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search input {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 200px;
+}
+
+.search button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  cursor: pointer;
+}
+
+.sunny {
+  background: linear-gradient(to top, #fddb92, #d1fdff);
+  color: #222222;
+}
+
+.rainy {
+  background: linear-gradient(to top, #4e54c8, #8f94fb);
+  color: #ffffff;
+}
+
+.cloudy {
+  background: linear-gradient(to top, #bdc3c7, #2c3e50);
+  color: #ffffff;
+}
+
+.clear {
+  background: linear-gradient(to top, #2980b9, #6dd5fa);
+  color: #ffffff;
+}
+
+.default {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  color: #222222;
+}
